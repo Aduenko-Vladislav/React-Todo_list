@@ -108,11 +108,10 @@ const CompleteButton = styled.button`
   transition: 0.3s linear;
 
   &:hover {
-    background-color: #2ca832;
+    background-color: #028b09;
   }
 
   &:active {
-    background-color: #050f05;
     box-shadow: 4px 4px 30px #4caf50;
   }
 `;
@@ -121,7 +120,7 @@ const ToDoList = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 15px;
-  border: 1px solid black;
+ 
 `;
 const Item = styled.div``;
 
