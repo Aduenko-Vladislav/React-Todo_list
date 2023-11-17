@@ -98,18 +98,15 @@ Error generating stack: `+o.message+`
   padding: 10px 15px;
 
   color: #ffffff;
-  background-color: #ff4343;
+  background: linear-gradient(45deg, #fb0101, #fb8200);
 
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   transition: 0.3s linear;
 
-  &:hover {
-    background-color: #e71414;
-  }
   &:active {
-    background-color: #ff4343;
+  
     box-shadow: 4px 4px 30px #ff4343;
   }
 `,$m=fe.div`
@@ -128,7 +125,7 @@ Error generating stack: `+o.message+`
   line-height: 20px;
   transition: 0.3s linear;
   &.active {
-    background: linear-gradient(45deg, #fb0101, #fb8200);;
+    background: linear-gradient(45deg, #fb0101, #fb8200);
     box-shadow: 4px 4px 30px #ff4343;
   }
 `,Om=fe.div`
