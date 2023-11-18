@@ -91,16 +91,7 @@ const ToDoButton = styled.button`
   }
 `;
 
-const ToDoList = styled.div`
-  display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
-  padding: 25px;
-  padding-right: 10px;
-
-  background: linear-gradient(45deg, #f9d7d7, #fbc68e);
-  border-radius: 10px;
-`;
+const ToDoList = styled.div``;
 const Item = styled.div``;
 
 const ItemTitle = styled.h3`
@@ -112,6 +103,7 @@ const ItemTitle = styled.h3`
 const ItemDescription = styled.p`
   font-size: 20px;
   font-weight: 300;
+  margin-bottom: 10px;
 `;
 
 const Icons = styled.div`
@@ -129,6 +121,7 @@ const StyledAiOutlineDelete = styled(AiOutlineDelete)`
     color: #fb1e1e;
   }
 `;
+
 const StyledBsCheckLg = styled(BsCheckLg)`
   font-size: 35px;
   cursor: pointer;
@@ -136,6 +129,24 @@ const StyledBsCheckLg = styled(BsCheckLg)`
   &:hover {
     color: #028b09;
   }
+`;
+
+const TodoListItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 15px;
+  padding: 25px;
+  padding-right: 10px;
+
+  background: linear-gradient(45deg, #f9d7d7, #fbc68e);
+  border-radius: 10px;
+`;
+
+const Time = styled.p`
+  font-style: italic;
+  font-size: 16px;
+  color: #7a5757;
 `;
 
 export {
@@ -154,4 +165,6 @@ export {
   Icons,
   StyledAiOutlineDelete,
   StyledBsCheckLg,
+  TodoListItem,
+  Time,
 };

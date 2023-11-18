@@ -1,5 +1,3 @@
-import React from "react";
-
 import { StyledTitle, Wrapper } from "./styles";
 
 function Title(props) {
