@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { AiOutlineDelete } from "react-icons/ai";
+import { BsCheckLg } from "react-icons/bs";
 
 const ToDoWrapper = styled.div`
-  max-width: 700px;
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 25px;
@@ -16,7 +18,7 @@ const ToDoInput = styled.div`
   gap: 25px;
   padding-bottom: 50px;
   border-bottom: 3px solid #f9ba77;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 `;
 
 const InputItem = styled.div`
@@ -41,7 +43,10 @@ const Input = styled.input`
   padding: 10px;
   border: 2px solid #fa8585;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 20px;
+  &:focus {
+    border: 3px solid #fa8585;
+  }
 `;
 
 const AddButton = styled.button`
@@ -51,26 +56,21 @@ const AddButton = styled.button`
   padding: 10px 15px;
 
   color: #ffffff;
-  background-color: #ff4343;
+  background: linear-gradient(45deg, #fb0101, #fb8200);
 
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
   transition: 0.3s linear;
 
-  &:hover {
-    background-color: #e71414;
-  }
   &:active {
-    background-color: #ff4343;
     box-shadow: 4px 4px 30px #ff4343;
   }
 `;
 
 const ToDoArea = styled.div`
   display: flex;
-  gap: 15px;
-  margin-bottom: 80px;
+  margin-bottom: 30px;
 `;
 
 const ToDoButton = styled.button`
@@ -79,53 +79,64 @@ const ToDoButton = styled.button`
   padding: 10px 15px;
 
   color: #ffffff;
-  background-color: #ff4343;
+  background: linear-gradient(45deg, #ff9a9a, #fda84d);
 
   font-weight: 600;
   font-size: 18px;
   line-height: 20px;
   transition: 0.3s linear;
-
-  &:hover {
-    background-color: #e71414;
-  }
-  &:active {
-    background-color: #ff4343;
+  &.active {
+    background: linear-gradient(45deg, #fb0101, #fb8200);
     box-shadow: 4px 4px 30px #ff4343;
-  }
-`;
-
-const CompleteButton = styled.button`
-  display: flex;
-  justify-content: center;
-  padding: 10px 15px;
-
-  color: #ffffff;
-  background-color: #4caf50;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 20px;
-  transition: 0.3s linear;
-
-  &:hover {
-    background-color: #028b09;
-  }
-
-  &:active {
-    box-shadow: 4px 4px 30px #4caf50;
   }
 `;
 
 const ToDoList = styled.div`
   display: flex;
-  flex-direction: column;
+  gap: 10px;
   margin-bottom: 15px;
- 
+  padding: 25px;
+  padding-right: 10px;
+
+  background: linear-gradient(45deg, #f9d7d7, #fbc68e);
+  border-radius: 10px;
 `;
 const Item = styled.div``;
 
-const ItemTitle = styled.h3``;
-const ItemDescription = styled.p``;
+const ItemTitle = styled.h3`
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fb1e1e;
+`;
+const ItemDescription = styled.p`
+  font-size: 20px;
+  font-weight: 300;
+`;
+
+const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+`;
+
+const StyledAiOutlineDelete = styled(AiOutlineDelete)`
+  font-size: 35px;
+  color: #be5a5a;
+  cursor: pointer;
+  &:hover {
+    color: #fb1e1e;
+  }
+`;
+const StyledBsCheckLg = styled(BsCheckLg)`
+  font-size: 35px;
+  cursor: pointer;
+  color: #4caf50;
+  &:hover {
+    color: #028b09;
+  }
+`;
 
 export {
   ToDoWrapper,
@@ -136,9 +147,11 @@ export {
   AddButton,
   ToDoArea,
   ToDoButton,
-  CompleteButton,
   ToDoList,
   Item,
   ItemTitle,
   ItemDescription,
+  Icons,
+  StyledAiOutlineDelete,
+  StyledBsCheckLg,
 };
