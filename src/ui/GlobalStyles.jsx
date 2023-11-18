@@ -294,5 +294,33 @@ textarea {
     color: #000;
     padding: 0.2em 0;
 }
+
+
+html, body {
+    scrollbar-color: #fb1e1e #fb8200;
+    scrollbar-width: thin;
+}
+
+
+::-webkit-scrollbar {
+    width: 13px; /* ширина для вертикального скролла */
+    height: 10px; /* высота для горизонтального скролла */
+    background-color: #ffccf8;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #fb8200;
+    border-radius: 9em;
+    box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #fb8200;
+}
+
+
+
+
+
 `;
 export default GlobalStyles;
