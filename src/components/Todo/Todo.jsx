@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 import {
   ToDoWrapper,
@@ -9,14 +10,18 @@ import {
   AddButton,
   ToDoArea,
   ToDoButton,
-  CompleteButton,
   ToDoList,
   Item,
   ItemTitle,
   ItemDescription,
+  Icons,
+  StyledAiOutlineDelete,
+  StyledBsCheckLg,
 } from "./styles";
 
 function Todo() {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <ToDoWrapper>
       <ToDoInput>
@@ -36,16 +41,32 @@ function Todo() {
       </ToDoInput>
 
       <ToDoArea>
-        <ToDoButton>Need to do</ToDoButton>
-        <CompleteButton>Completed</CompleteButton>
+        <ToDoButton
+          className={isActive === false && "active"}
+          onClick={() => setIsActive(false)}
+        >
+          Need to do
+        </ToDoButton>
+        <ToDoButton
+          className={isActive === true && "active"}
+          onClick={() => setIsActive(true)}
+        >
+          Completed
+        </ToDoButton>
       </ToDoArea>
 
       <ToDoList>
         <Item>
           <ItemTitle>Task1</ItemTitle>
-          <ItemDescription>Lorem ipsum dolor sit amet.</ItemDescription>
+          <ItemDescription>
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Expedita ipsa voluptatibus voluptatum?
+          </ItemDescription>
         </Item>
-        
+        <Icons>
+          <StyledAiOutlineDelete />
+          <StyledBsCheckLg />
+        </Icons>
       </ToDoList>
     </ToDoWrapper>
   );
